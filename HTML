@@ -1,1 +1,35 @@
 
+<!--<input type="text" class="letter" maxlength=1>-->
+<img  id="img" src="">
+
+
+
+<p id="word" style="letter-spacing:4px"></p>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+
+    var wordToGuess = ["M","O","T"];
+    var wordPlayed = ["_","_","_"];
+    var myLettre =String.fromCharCode(event.which);
+
+    $("#word").text(wordPlayed.join(""));
+
+    $(document).keydown(function(event){
+        
+        wordToGuess.forEach(function(letter, index){
+            if(String.fromCharCode(event.which) == letter){
+                wordPlayed[index] = letter
+            }
+        })
+            
+            for(i=0;myLettre!==lettre && i<=9;i++){
+               $('#img').attr(src="i +'.jpg'") 
+            }
+            
+        $("#word").text(wordPlayed.join(""));
+    });
+</script>
